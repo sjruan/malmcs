@@ -8,7 +8,26 @@ Sijie Ruan, Jie Bao, Yuxuan Liang, Ruiyuan Li, Tianfu He, Chuishi Meng, Yanhua L
 
 ## Requirements
 
+Python 3.6
+
+* numpy==1.14.5
+* networkx==2.2
+* shapely==1.6.4
+* pickle
+
 ## Dataset
+
+
+## Usage
+
+Tunable Parameters
+* Service radius `radius`
+* Energy limitation `cost_limit` 
+* Number of Resource `k`
+
+```
+python evaluate.py
+```
 
 ## License
 
