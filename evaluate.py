@@ -74,6 +74,7 @@ if __name__ == '__main__':
     start_day = datetime(2018, 1, 1)
     end_day = datetime(2018, 11, 1)
     eval_start_day = datetime(2018, 10, 1)
+    nb_eval_days = (end_day - eval_start_day).days
     # Note: the radius is 0-indexed, i.e., radius=2 <-> r=2 in the paper
     radius = 1
     time_interval = 60
@@ -90,4 +91,4 @@ if __name__ == '__main__':
     policy = EADSPolicy(k, prediction_model, start_day, end_day, start_hour, end_hour,
                         time_interval, radius, cost_limit, depot)
     tot_coverage = evaluator.evaluate(policy, k)
-    print(tot_coverage / 31)
+    print(tot_coverage / nb_eval_days)
